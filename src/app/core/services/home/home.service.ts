@@ -32,6 +32,11 @@ export class HomeService {
           src: 'assets/images/03home/home.png',
           alt: 'Banner Image'
         }
+      },
+      account: {
+        title: 'Boost your business with Open',
+        description: 'Get your hand on a term loan that\'s crafted for your business',
+        button: 'Get an Open Account'
       }
     }
     this._assets$.next(this._assets)

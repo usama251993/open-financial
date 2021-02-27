@@ -1,0 +1,39 @@
+div.account-container {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 16px;
+
+  margin: 48px 0px;
+
+  div.account-title {
+    p {
+      font-size: 36px;
+      line-height: normal;
+    }
+  }
+
+  div.account-separator {
+    width: 320px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #707070;
+  }
+
+  div.account-button {
+    button {
+      background: none;
+
+      // border-image: linear-gradient(90deg, #9f62c9 0%, #663399 100%);
+      // border-style: solid;
+      // border-width: 1px;
+
+      transition: 500ms;
+      &:hover {
+        background: transparent
+          linear-gradient(90deg, #9f62c9 0%, #663399 100%) 0% 0%
+          no-repeat padding-box;
+        color: #ffffff;
+      }
+    }
+  }
+}

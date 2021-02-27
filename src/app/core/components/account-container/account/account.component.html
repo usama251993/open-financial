@@ -1,1 +1,26 @@
-<p>account works!</p>
+<ng-container *ngIf="!!assets; else noAccount">
+  <div class="account-container">
+
+    <div class="account-title">
+      <p>{{ assets.title }}</p>
+    </div>
+
+    <div class="account-separator my-4"></div>
+
+    <div class="account-description">
+      <p>{{ assets.description }}</p>
+    </div>
+
+    <div class="account-button">
+      <button mat-stroked-button
+              color="primary">{{ assets.button }}</button>
+    </div>
+
+  </div>
+</ng-container>
+
+<ng-template #noAccount>
+  <div class="account-container">
+    <p>Dummy Account</p>
+  </div>
+</ng-template>
