@@ -1,0 +1,15 @@
+div.app-banner-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: 12px;
+  margin: 48px 0px;
+
+  div.app-banner-title {
+    p {
+      font-size: 36px;
+      line-height: normal;
+    }
+  }
+
+  // div.app-banner-image { }
+}

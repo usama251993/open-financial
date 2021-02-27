@@ -2,6 +2,7 @@ div.app-container {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  padding: 0px 72px;
 
   div.app-navbar-holder {
     position: sticky;
@@ -13,11 +14,13 @@ div.app-container {
     div.app-top-holder {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-gap: 16px;
     }
 
     div.app-bottom-holder {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      grid-gap: 16px;
     }
   }
 

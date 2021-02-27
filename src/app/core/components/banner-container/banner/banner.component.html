@@ -1,1 +1,17 @@
-<p>banner works!</p>
+<ng-container *ngIf="!!assets; else noBanner">
+  <div class="app-banner-container">
+    <div class="app-banner-title">
+      <p>{{ assets.title }}</p>
+    </div>
+    <div class="app-banner-image">
+      <img [src]="assets.image.src"
+           [alt]="assets.image.alt">
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #noBanner>
+  <div class="app-banner-container">
+    <p>Dummy Banner</p>
+  </div>
+</ng-template>

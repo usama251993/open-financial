@@ -25,6 +25,13 @@ export class HomeService {
         menuItems: ['Products', 'Solutions', 'Pricing'],
         login: 'Login',
         getStarted: 'Get Started'
+      },
+      banner: {
+        title: 'We make it Super Simple',
+        image: {
+          src: 'assets/images/03home/home.png',
+          alt: 'Banner Image'
+        }
       }
     }
     this._assets$.next(this._assets)
