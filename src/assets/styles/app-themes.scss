@@ -1,0 +1,36 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+@mixin app-color($config) {
+  $config: mat-get-color-config($config);
+  $primary: map-get($config, primary);
+  $accent: map-get($config, accent);
+
+  *.app-color {
+    background-color: mat-color($primary);
+    color: #ffffff;
+  }
+}
+
+@mixin app-theme($theme) {
+  $color: mat-get-color-config($theme);
+
+  @if $color != null {
+    @include app-color($color);
+  }
+}
+
+$primary: mat-palette($mat-deep-purple);
+$accent: mat-palette($mat-yellow);
+
+$theme: mat-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+    ),
+  )
+);
+
+@include angular-material-theme($theme);
+@include app-theme($theme);

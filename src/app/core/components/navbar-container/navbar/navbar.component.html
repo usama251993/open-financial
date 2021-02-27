@@ -1,0 +1,31 @@
+<ng-container *ngIf="!!assets; else noNavbar">
+  <div class="app-navbar-container">
+
+    <div class="app-logo">
+      <img [src]="assets.logo.src"
+           [alt]="assets.logo.alt">
+    </div>
+
+    <div class="app-menu-items mr-4">
+      <ng-container *ngFor="let _ of assets.menuItems">
+        <button mat-button
+                class="px-3 app-menu-item-button">{{ _ }}</button>
+      </ng-container>
+      <button mat-stroked-button
+              color="primary"
+              id="app-login-button"
+              class="px-3">{{ assets.login }}</button>
+      <button mat-stroked-button
+              color="primary"
+              id="app-get-started-button"
+              class="px-3 app-color">{{ assets.getStarted }}</button>
+    </div>
+
+  </div>
+</ng-container>
+
+<ng-template #noNavbar>
+  <div class="app-navbar-container p-4">
+    Navbar Dummy
+  </div>
+</ng-template>

@@ -1,0 +1,25 @@
+div.app-container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  div.app-navbar-holder {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+  }
+
+  div.app-body-holder {
+    div.app-top-holder {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    div.app-bottom-holder {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  // div.app-footer-holder { }
+}

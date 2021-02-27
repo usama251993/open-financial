@@ -1,0 +1,46 @@
+div.app-navbar-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  div.app-menu-items {
+    justify-self: flex-end;
+
+    button {
+      border-radius: 16px;
+
+      &#app-login-button {
+        background: none;
+        border-image: linear-gradient(90deg, #9f62c9 0%, #663399 100%);
+        border-style: solid;
+        border-width: 1px;
+        transition: 500ms;
+        &:hover {
+          background: transparent
+            linear-gradient(90deg, #9f62c9 0%, #663399 100%) 0% 0%
+            no-repeat padding-box;
+          color: #ffffff;
+        }
+      }
+
+      &#app-get-started-button {
+        background: transparent
+          linear-gradient(90deg, #9f62c9 0%, #663399 100%) 0% 0%
+          no-repeat padding-box;
+        color: #ffffff;
+        transition: 500ms;
+        &:hover {
+          background: none;
+          color: #000000;
+          border-image: linear-gradient(
+            90deg,
+            #9f62c9 0%,
+            #663399 100%
+          );
+          border-style: solid;
+          border-width: 1px;
+        }
+      }
+    }
+  }
+}
