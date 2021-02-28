@@ -1,28 +1,44 @@
-# OpenFinancial
+# Open Financial Assignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
+Angular Assignment by Open Financial
 
-## Development server
+## :memo: Tasks
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To implement [this design](https://xd.adobe.com/view/32fd9b77-5ce0-49f6-93b9-c8ea63be5e08-67ae/specs/) using Angular
 
-## Code scaffolding
+## :alembic: Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Angular CLI
+2. Angular Material
+3. Microsoft VS Code
+4. Git
 
-## Build
+## :check_mark: What's Working?
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Hover animations on `navbar` buttons
+2. EMI Calculator
+3. Range sliders are interdependant
+4. Optional EMI number input is disabled depending on the `slide-toggle`
+5. Hover animations on `features` cards
+6. Hover animation on `Get an Open Account` button
+7. Background Graphics are in place
 
-## Running unit tests
+## :cross_mark: What's Not Working?
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Responsiveness
 
-## Running end-to-end tests
+## :light_bulb: Areas of Interest
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+1. Code base folder structure
+2. Reactive data fetch in all the components
+3. Singleton Service
+4. Angular Theming to extract prebuild or user-defined theme colors
+5. Behavior of `Eligibility Calculator` Form
 
-## Further help
+## :page_facing_up: Author and License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# open-financial
+[Usama Ansari](https://github.com/usama251993)
+
+[MIT License](https://opensource.org/licenses/MIT)
+
+All Hail [Linus Torvalds](https://github.com/torvalds)
