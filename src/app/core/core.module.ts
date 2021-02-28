@@ -12,9 +12,6 @@ import { HomeComponent } from './components/home-container/home/home.component'
 import { NavbarContainerComponent } from './components/navbar-container/navbar-container.component'
 import { NavbarComponent } from './components/navbar-container/navbar/navbar.component'
 
-import { FooterContainerComponent } from './components/footer-container/footer-container.component'
-import { FooterComponent } from './components/footer-container/footer/footer.component'
-
 import { BannerContainerComponent } from './components/banner-container/banner-container.component'
 import { BannerComponent } from './components/banner-container/banner/banner.component'
 
@@ -35,8 +32,6 @@ import { AppCurrencyPipe } from './services/pipes/app-currency.pipe'
     HomeComponent,
     NavbarContainerComponent,
     NavbarComponent,
-    FooterContainerComponent,
-    FooterComponent,
     BannerContainerComponent,
     BannerComponent,
     CalculatorContainerComponent,

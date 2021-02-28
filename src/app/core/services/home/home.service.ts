@@ -37,11 +37,6 @@ export class HomeService {
           alt: 'Banner Image'
         }
       },
-      account: {
-        title: 'Boost your business with Open',
-        description: 'Get your hand on a term loan that\'s crafted for your business',
-        button: 'Get an Open Account'
-      },
       calculator: {
         assets: {
           form: {
@@ -92,7 +87,7 @@ export class HomeService {
             name: 'emi',
             type: 'number',
             label: 'EMI of existing loans (optional)',
-            initialization: { value: 0, disabled: false }
+            initialization: { value: 0, disabled: true }
           },
           submit: {
             name: 'submit',
@@ -101,6 +96,52 @@ export class HomeService {
             initialization: { value: '', disabled: false }
           }
         }
+      },
+      features: {
+        left: [
+          {
+            image: {
+              src: 'assets/images/04payment/payment.png', alt: 'Disbursement'
+            },
+            title: 'Quick Cash Disbursement',
+            description: 'Get terms loans that your business needs within 72 hrs'
+          },
+          {
+            image: {
+              src: 'assets/images/06interest/interest.png', alt: 'Interest'
+            },
+            title: 'Low-interest rate',
+            description: 'Achieve your financial goals with an amazing interest rate starting at 13% per annum'
+          },
+          {
+            image: {
+              src: 'assets/images/08paperwork/paperwork.png', alt: 'Paperwork'
+            },
+            title: 'Zero Paperwork',
+            description: 'Get started instantly by submitting only your basic details & bank statements'
+          }
+        ],
+        right: [
+          {
+            image: {
+              src: 'assets/images/05freelancer/freelancer.png', alt: 'Freelancer'
+            },
+            title: 'Ace your business finances',
+            description: 'Manage banking, accounting & everything in between, on one platform'
+          },
+          {
+            image: {
+              src: 'assets/images/07covid/covid.png', alt: 'Covid'
+            },
+            title: 'Loans to fight COVID-19',
+            description: 'Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh'
+          }
+        ]
+      },
+      account: {
+        title: 'Boost your business with Open',
+        description: 'Get your hand on a term loan that\'s crafted for your business',
+        button: 'Get an Open Account'
       }
     }
     this._assets$.next(this._assets)

@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core'
+import { Component, Input, OnInit, ViewChild } from '@angular/core'
 import { FormBuilder, FormGroup } from '@angular/forms'
+import { MatSlideToggle, MatSlideToggleChange } from '@angular/material/slide-toggle'
 
 import { BehaviorSubject } from 'rxjs'
 
@@ -41,6 +42,11 @@ export class CalculatorComponent implements OnInit {
 
   updateExpenseMax($: number): void {
     this.form.expense.max = $
+  }
+
+  toggleLoan($: MatSlideToggleChange): void {
+    if ($.checked) this.formGroup.get(this.form.emi.name).enable()
+    else this.formGroup.get(this.form.emi.name).disable()
   }
 
 }

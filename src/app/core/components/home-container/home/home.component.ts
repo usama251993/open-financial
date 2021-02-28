@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core'
+
 import { BehaviorSubject } from 'rxjs'
+
 import { HomeModel } from 'src/app/core/models/home/app-home.model'
 
 @Component({
@@ -18,5 +20,4 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void { }
-
 }

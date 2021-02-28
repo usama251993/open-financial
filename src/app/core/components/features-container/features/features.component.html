@@ -1,1 +1,45 @@
-<p>features works!</p>
+<ng-container *ngIf="!!assets; else noFeatures">
+  <div class="features-container">
+    <div class="features-left-container">
+      <ng-container *ngTemplateOutlet="matNavRef; 
+                      context: { items: assets.left };">
+      </ng-container>
+    </div>
+
+    <div class="features-right-container">
+      <ng-container *ngTemplateOutlet="matNavRef; 
+                      context: { items: assets.right };">
+      </ng-container>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #matNavRef
+             let-navItems="items">
+  <ng-container *ngFor="let _ of navItems">
+
+    <div class="feature mx-2 p-3 mat-elevation-z4">
+      <div class="feature-image">
+        <img [src]="_.image.src"
+             [alt]="_.image.alt">
+      </div>
+
+      <div class="feature-title">
+        <p>{{ _.title }}</p>
+      </div>
+
+      <div class="feature-description">
+        <p>{{ _.description }}</p>
+      </div>
+    </div>
+
+  </ng-container>
+</ng-template>
+
+<ng-template #noFeatures>
+
+  <div class="features-container">
+    <p>Dummy Features</p>
+  </div>
+
+</ng-template>

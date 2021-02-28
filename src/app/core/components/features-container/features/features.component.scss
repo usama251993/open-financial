@@ -1,0 +1,31 @@
+div.features-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  align-items: center;
+  grid-gap: 16px;
+
+  div.features-left-container,
+  div.features-right-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 36px;
+
+    div.feature {
+      cursor: default;
+      border-radius: 20px;
+      transition: 500ms;
+
+      div.feature-title {
+        font-weight: bold;
+      }
+
+      &:hover {
+        background: transparent
+          linear-gradient(180deg, #9f62c980 0%, #663399 100%) 0% 0%
+          no-repeat padding-box;
+        color: #ffffff;
+      }
+    }
+  }
+}

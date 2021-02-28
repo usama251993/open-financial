@@ -3,6 +3,13 @@ div.app-navbar-container {
   grid-template-columns: auto 1fr;
   align-items: center;
 
+  div.app-logo {
+    img {
+      height: 96px;
+      width: 96px;
+    }
+  }
+
   div.app-menu-items {
     justify-self: flex-end;
 

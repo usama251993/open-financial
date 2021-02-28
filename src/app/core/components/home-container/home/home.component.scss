@@ -12,6 +12,8 @@ div.app-container {
     top: 0px;
     left: 0px;
     padding: 0px 72px;
+    z-index: 3;
+    background-color: #ffffff;
   }
 
   div.app-body-holder {
@@ -30,6 +32,7 @@ div.app-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 16px;
+      padding: 24px 72px;
 
       background-image: url(/assets/images/09wave/wave.svg);
       background-size: cover;

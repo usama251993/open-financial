@@ -84,10 +84,9 @@
                 </div>
                 <input matInput
                        id="loans-input"
-                       [formControlName]="form.loans.name"
-                       [value]="loansToggle.checked">
+                       [formControlName]="form.loans.name">
                 <mat-slide-toggle color="primary"
-                                  #loansToggle></mat-slide-toggle>
+                                  (change)="toggleLoan($event)"></mat-slide-toggle>
               </div>
             </mat-form-field>
 
