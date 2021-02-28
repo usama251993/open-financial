@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppMaterialModule } from '../app-material.module'
 
@@ -26,10 +27,29 @@ import { FeaturesComponent } from './components/features-container/features/feat
 import { AccountContainerComponent } from './components/account-container/account-container.component'
 import { AccountComponent } from './components/account-container/account/account.component'
 
+import { AppCurrencyPipe } from './services/pipes/app-currency.pipe'
+
 @NgModule({
-  declarations: [HomeContainerComponent, HomeComponent, NavbarContainerComponent, NavbarComponent, FooterContainerComponent, FooterComponent, BannerContainerComponent, BannerComponent, CalculatorContainerComponent, CalculatorComponent, FeaturesContainerComponent, FeaturesComponent, AccountContainerComponent, AccountComponent],
+  declarations: [
+    HomeContainerComponent,
+    HomeComponent,
+    NavbarContainerComponent,
+    NavbarComponent,
+    FooterContainerComponent,
+    FooterComponent,
+    BannerContainerComponent,
+    BannerComponent,
+    CalculatorContainerComponent,
+    CalculatorComponent,
+    FeaturesContainerComponent,
+    FeaturesComponent,
+    AccountContainerComponent,
+    AccountComponent,
+    AppCurrencyPipe
+  ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     CoreRoutingModule,
     AppMaterialModule
   ]

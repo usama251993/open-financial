@@ -1,11 +1,145 @@
 <ng-container *ngIf="!!assets; else noCalculator">
-  <div class="app-calculator-container">
+  <div class="calculator-form-holder">
+
+    <form [formGroup]="formGroup">
+      <div class="calculator-container">
+        <div class="calculator-form-card mat-elevation-z2">
+          <div class="form-title">
+            <p>{{ assets.form.title }}</p>
+          </div>
+          <div class="form-body">
+
+            <mat-form-field class="form-field">
+              <div class="form-field">
+                <div class="form-field-label">
+                  <p>{{ form.income.label }}</p>
+                </div>
+                <input matInput
+                       [id]="form.income.name"
+                       [type]="form.income.type"
+                       [formControlName]="form.income.name"
+                       [value]="incomeSlider.value">
+                <div class="form-field-value">
+                  <p class="mb-0">{{ incomeSlider.value | appCurrency }}</p>
+                </div>
+                <mat-slider [min]="form.income.min"
+                            [max]="form.income.max"
+                            step="100"
+                            color="primary"
+                            (change)="updateExpenseMax(incomeSlider.value)"
+                            #incomeSlider>
+                </mat-slider>
+                <div class="form-range-holder">
+                  <p>{{ form.income.min | appCurrency }}</p>
+                  <p>{{ form.income.max | appCurrency }}</p>
+                </div>
+              </div>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+              <div class="form-field">
+                <div class="form-field-label">
+                  <p>{{ form.expense.label }}</p>
+                </div>
+                <input matInput
+                       [id]="form.expense.name"
+                       [type]="form.expense.type"
+                       [formControlName]="form.expense.name"
+                       [value]="expenseSlider.value">
+                <div class="form-field-value">
+                  <p class="mb-0">{{ expenseSlider.value | appCurrency }}</p>
+                </div>
+                <mat-slider [min]="form.expense.min"
+                            [max]="form.expense.max"
+                            step="100"
+                            color="primary"
+                            #expenseSlider>
+                </mat-slider>
+                <div class="form-range-holder">
+                  <p>{{ form.expense.min | appCurrency }}</p>
+                  <p>{{ form.expense.max | appCurrency }}</p>
+                </div>
+              </div>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+              <div class="form-field">
+                <div class="form-field-label">
+                  <p>{{ form.repayment.label }}</p>
+                </div>
+                <mat-select [formControlName]="form.repayment.name"
+                            #repaymentSelect>
+                  <mat-option *ngFor="let _ of assets.form.repayment"
+                              [value]="_.value">{{ _.viewValue }}</mat-option>
+                </mat-select>
+              </div>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+              <div class="form-field"
+                   id="loans">
+                <div class="form-field-label"
+                     id="loans-label">
+                  <p>{{ form.loans.label }}</p>
+                </div>
+                <input matInput
+                       id="loans-input"
+                       [formControlName]="form.loans.name"
+                       [value]="loansToggle.checked">
+                <mat-slide-toggle color="primary"
+                                  #loansToggle></mat-slide-toggle>
+              </div>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+              <mat-label>{{ form.emi.label }}</mat-label>
+              <input matInput
+                     [id]="form.emi.name"
+                     [type]="form.emi.type"
+                     [formControlName]="form.emi.name">
+              <span matPrefix
+                    class="mr-2">₹</span>
+            </mat-form-field>
+
+          </div>
+        </div>
+
+        <div class="calculator-summary-card app-color">
+
+          <div class="summary-field">
+            <div class="summary-field-label">
+              <p>{{ assets.summary.loan }}</p>
+            </div>
+            <div class="summary-field-value">
+              <p>{{ (incomeSlider.value - expenseSlider.value) | appCurrency }}</p>
+            </div>
+          </div>
+
+          <div class="summary-field">
+            <div class="summary-field-label">
+              <p>{{ assets.summary.emi }}</p>
+            </div>
+            <div class="summary-field-value">
+              <p>{{ ((incomeSlider.value - expenseSlider.value) / repaymentSelect.value) |
+                appCurrency }}</p>
+            </div>
+          </div>
+
+          <div class="summary-field">
+            <button mat-stroked-button
+                    color="primary"
+                    [type]="form.submit.type">{{ form.submit.label }}</button>
+          </div>
+
+        </div>
+      </div>
+    </form>
 
   </div>
 </ng-container>
 
 <ng-template #noCalculator>
-  <div class="app-calculator-container">
-    <p>Dummay Calculator</p>
+  <div class="calculator-container">
+    <p>Dummy Calculator</p>
   </div>
 </ng-template>

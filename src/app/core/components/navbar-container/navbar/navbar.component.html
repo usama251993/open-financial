@@ -6,7 +6,7 @@
            [alt]="assets.logo.alt">
     </div>
 
-    <div class="app-menu-items mr-4">
+    <div class="app-menu-items">
       <ng-container *ngFor="let _ of assets.menuItems">
         <button mat-button
                 class="px-3 mx-1 app-menu-item-button">{{ _ }}</button>
@@ -14,11 +14,11 @@
       <button mat-stroked-button
               color="primary"
               id="app-login-button"
-              class="px-3 mx-1">{{ assets.login }}</button>
+              class="px-3 mx-1 app-menu-item-button">{{ assets.login }}</button>
       <button mat-stroked-button
               color="primary"
               id="app-get-started-button"
-              class="px-3 mx-1 app-color">{{ assets.getStarted }}</button>
+              class="px-3 ml-1 app-menu-item-button app-color">{{ assets.getStarted }}</button>
     </div>
 
   </div>

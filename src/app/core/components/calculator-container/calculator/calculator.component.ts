@@ -1,8 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core'
+import { FormBuilder, FormGroup } from '@angular/forms'
 
 import { BehaviorSubject } from 'rxjs'
 
-import { CalculatorModel } from 'src/app/core/models/calculator/app-calculator.model'
+import { CalculatorModel, CalculatorFormModel } from 'src/app/core/models/calculator/app-calculator.model'
 
 @Component({
   selector: 'app-calculator',
@@ -12,13 +13,34 @@ import { CalculatorModel } from 'src/app/core/models/calculator/app-calculator.m
 export class CalculatorComponent implements OnInit {
 
   private _assets$: BehaviorSubject<CalculatorModel> = new BehaviorSubject<CalculatorModel>(null)
+  private _form$: BehaviorSubject<CalculatorFormModel> = new BehaviorSubject<CalculatorFormModel>(null)
 
   @Input()
   set assets(value: CalculatorModel) { this._assets$.next(value) }
   get assets(): CalculatorModel { return this._assets$.getValue() }
 
-  constructor() { }
+  @Input()
+  set form(value: CalculatorFormModel) { this._form$.next(value) }
+  get form(): CalculatorFormModel { return this._form$.getValue() }
 
-  ngOnInit(): void { }
+  formGroup: FormGroup
+
+  constructor(
+    private _fb: FormBuilder
+  ) { }
+
+  ngOnInit(): void {
+    this.formGroup = this._fb.group({
+      income: [{ ...this.form.income.initialization }],
+      expense: [{ ...this.form.expense.initialization }],
+      repayment: [{ ...this.form.repayment.initialization }],
+      loans: [{ ...this.form.loans.initialization }],
+      emi: [{ ...this.form.emi.initialization }]
+    })
+  }
+
+  updateExpenseMax($: number): void {
+    this.form.expense.max = $
+  }
 
 }

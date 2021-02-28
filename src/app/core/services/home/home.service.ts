@@ -42,7 +42,66 @@ export class HomeService {
         description: 'Get your hand on a term loan that\'s crafted for your business',
         button: 'Get an Open Account'
       },
-      calculator: {}
+      calculator: {
+        assets: {
+          form: {
+            title: 'Eligibility Calculator',
+            repayment: [
+              { value: 3, viewValue: '3 Months' },
+              { value: 6, viewValue: '6 Months' },
+              { value: 12, viewValue: '12 Months' },
+              { value: 18, viewValue: '18 Months' },
+              { value: 24, viewValue: '24 Months' },
+            ]
+          },
+          summary: {
+            loan: 'Loan Amount',
+            emi: 'Your EMI will be'
+          }
+        },
+        form: {
+          income: {
+            name: 'income',
+            type: 'text',
+            label: 'Monthly Income',
+            initialization: { value: 0, disabled: true },
+            min: 100000,
+            max: 300000
+          },
+          expense: {
+            name: 'expense',
+            type: 'text',
+            label: 'Monthly Expense',
+            initialization: { value: 0, disabled: true },
+            min: 0,
+            max: 300000
+          },
+          repayment: {
+            name: 'repayment',
+            type: 'text',
+            label: 'Repayment Tenure',
+            initialization: { value: 6, disabled: false }
+          },
+          loans: {
+            name: 'loans',
+            type: 'checkbox',
+            label: 'Do you have any existing loans?',
+            initialization: { value: false, disabled: false }
+          },
+          emi: {
+            name: 'emi',
+            type: 'number',
+            label: 'EMI of existing loans (optional)',
+            initialization: { value: 0, disabled: false }
+          },
+          submit: {
+            name: 'submit',
+            type: 'text',
+            label: 'Get Money',
+            initialization: { value: '', disabled: false }
+          }
+        }
+      }
     }
     this._assets$.next(this._assets)
   }
