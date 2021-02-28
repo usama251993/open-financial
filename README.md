@@ -13,7 +13,7 @@ To implement [this design](https://xd.adobe.com/view/32fd9b77-5ce0-49f6-93b9-c8e
 3. Microsoft VS Code
 4. Git
 
-## :check_mark: What's Working?
+## :heavy_check_mark: What's Working?
 
 1. Hover animations on `navbar` buttons
 2. EMI Calculator
@@ -23,11 +23,11 @@ To implement [this design](https://xd.adobe.com/view/32fd9b77-5ce0-49f6-93b9-c8e
 6. Hover animation on `Get an Open Account` button
 7. Background Graphics are in place
 
-## :cross_mark: What's Not Working?
+## :x: What's Not Working?
 
 1. Responsiveness
 
-## :light_bulb: Areas of Interest
+## :bulb: Areas of Interest
 
 1. Code base folder structure
 2. Reactive data fetch in all the components
@@ -37,8 +37,8 @@ To implement [this design](https://xd.adobe.com/view/32fd9b77-5ce0-49f6-93b9-c8e
 
 ## :page_facing_up: Author and License
 
-[Usama Ansari](https://github.com/usama251993)
+:man: [Usama Ansari](https://github.com/usama251993)
 
-[MIT License](https://opensource.org/licenses/MIT)
+:memo: [MIT License](https://opensource.org/licenses/MIT)
 
-All Hail [Linus Torvalds](https://github.com/torvalds)
+:sparkles: All Hail [Linus Torvalds](https://github.com/torvalds)
