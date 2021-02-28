@@ -1,7 +1,6 @@
 div.account-container {
   display: grid;
   grid-template-rows: auto auto auto auto;
-  grid-gap: 16px;
 
   margin: 48px 0px;
 
@@ -9,18 +8,24 @@ div.account-container {
     p {
       font-size: 36px;
       line-height: normal;
+      width: 360px;
     }
   }
 
   div.account-separator {
-    width: 320px;
+    width: 160px;
     height: 6px;
     border-radius: 6px;
     background-color: #707070;
   }
 
+  div.account-description {
+    margin: 32px 0px;
+  }
+
   div.account-button {
     button {
+      border-radius: 16px;
       background: none;
 
       // border-image: linear-gradient(90deg, #9f62c9 0%, #663399 100%);

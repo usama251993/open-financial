@@ -31,13 +31,18 @@ export class HomeService {
         image: {
           src: 'assets/images/03home/home.png',
           alt: 'Banner Image'
+        },
+        dots: {
+          src: 'assets/images/10dots/dots.svg',
+          alt: 'Banner Image'
         }
       },
       account: {
         title: 'Boost your business with Open',
         description: 'Get your hand on a term loan that\'s crafted for your business',
         button: 'Get an Open Account'
-      }
+      },
+      calculator: {}
     }
     this._assets$.next(this._assets)
   }

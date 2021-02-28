@@ -19,10 +19,6 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.groupCollapsed(`[NavbarComponent]`)
-    console.log(this.assets)
-    console.groupEnd()
-  }
+  ngOnInit(): void { }
 
 }

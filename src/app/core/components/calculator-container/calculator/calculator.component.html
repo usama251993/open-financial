@@ -1,1 +1,11 @@
-<p>calculator works!</p>
+<ng-container *ngIf="!!assets; else noCalculator">
+  <div class="app-calculator-container">
+
+  </div>
+</ng-container>
+
+<ng-template #noCalculator>
+  <div class="app-calculator-container">
+    <p>Dummay Calculator</p>
+  </div>
+</ng-template>

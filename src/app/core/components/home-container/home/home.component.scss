@@ -2,12 +2,16 @@ div.app-container {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  padding: 0px 72px;
+
+  background-image: url(/assets/images/02blob/circle.svg);
+  background-repeat: no-repeat;
+  background-position: calc(55vw) calc(-30vh);
 
   div.app-navbar-holder {
     position: sticky;
     top: 0px;
     left: 0px;
+    margin: 0px 72px;
   }
 
   div.app-body-holder {
@@ -15,12 +19,22 @@ div.app-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 16px;
+      padding: 24px 72px;
+
+      background-image: url(/assets/images/02blob/blob-small.svg);
+      background-repeat: no-repeat;
+      background-position: -150px 10px;
     }
 
     div.app-bottom-holder {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 16px;
+
+      background-image: url(/assets/images/09wave/wave.svg);
+      background-size: cover;
+      background-position-y: bottom;
+      background-repeat: no-repeat;
     }
   }
 
