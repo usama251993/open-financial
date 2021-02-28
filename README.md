@@ -6,6 +6,19 @@ Angular Assignment by Open Financial
 
 To implement [this design](https://xd.adobe.com/view/32fd9b77-5ce0-49f6-93b9-c8ea63be5e08-67ae/specs/) using Angular
 
+## Run the Application
+
+### Prerequisites
+
+> [NodeJS](https://nodejs.org/en/) installed globally
+
+```bash
+git clone https://github.com/usama251993/open-financial.git
+cd open-financial
+npm install
+npm start
+```
+
 ## :alembic: Technologies Used
 
 1. Angular CLI
